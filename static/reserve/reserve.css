@@ -1,0 +1,126 @@
+
+
+
+
+/* Reset some defaults */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Page background */
+body {
+  background: #f4f6f8;
+  padding: 20px;
+}
+
+/* ===================== */
+/* Book Ticket Section   */
+/* ===================== */
+
+#book_ticket {
+  max-width: 400px;
+  margin: 0 auto 30px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+#spaced {
+  display: block;
+  font-size: 20px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* Form styling */
+#reserve {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#reserve label {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+#reserve input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: border 0.2s;
+}
+
+#reserve input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Button */
+#reserve button {
+  margin-top: 10px;
+  padding: 10px;
+  border: none;
+  background: #007bff;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: background 0.2s;
+}
+
+#reserve button:hover {
+  background: #0056b3;
+}
+
+/* ===================== */
+/* Tickets Section       */
+/* ===================== */
+
+body > strong {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+/* Container */
+#my_tickets {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+/* Each ticket card */
+#my_tickets > div {
+  padding: 10px;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  min-width: 140px;
+}
+
+/* QR Image */
+.qrcode {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+
+  border: 2px solid #333;
+  border-radius: 10px;
+  padding: 5px;
+  background: white;
+
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+
+  transition: transform 0.2s;
+}
+
+/* .qrcode:hover {
+  transform: scale(1.05);
+} */
