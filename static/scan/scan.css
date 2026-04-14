@@ -1,0 +1,102 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Page layout */
+body {
+  background: #f4f6f8;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* ===================== */
+/* Scanner Card          */
+/* ===================== */
+
+#scanner {
+  width: 320px;
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+#scanner p {
+  font-size: 18px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+/* Button */
+#control_scanner {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 8px;
+  background: #007bff;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.2s;
+}
+
+#control_scanner:hover {
+  background: #0056b3;
+}
+
+/* QR Reader container */
+#reader {
+  width: 100%;
+  min-height: 250px;
+  border: 2px dashed #ccc;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #fafafa;
+}
+
+/* ===================== */
+/* Result Card           */
+/* ===================== */
+
+#result {
+  width: 320px;
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+#result p:first-child {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Ticket state */
+#state {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Optional states */
+#state.valid {
+  color: #28a745; /* green */
+}
+
+#state.invalid {
+  color: #dc3545; /* red */
+}

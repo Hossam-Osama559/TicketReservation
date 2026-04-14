@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scanner</title>
+    <script src="https://unpkg.com/html5-qrcode" ></script>
+    <script src="/static/scan/scan.js" defer></script>
+    <link rel="stylesheet" href="/static/scan/scan.css">
+    
+</head>
+<body>
+    
+
+    <div id="scanner" style="width: 300px">
+
+
+        <p>Start Scan here</p>
+
+        <button id="control_scanner">
+
+            Start the scanner
+
+        </button>
+
+
+        <div id="reader"></div>
+
+
+
+    </div>
+
+
+    <div id="result">
+
+        <p>The Ticket State</p>
+        <p id="state"></p>
+
+
+    </div>
+
+</body>
+</html>
