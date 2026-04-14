@@ -1,0 +1,9 @@
+CREATE TABLE sessions (
+    session_id VARCHAR(255) PRIMARY KEY,
+
+    pid VARCHAR(255) NOT NULL ,
+
+    expire_at TIMESTAMP NOT NULL,
+
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
