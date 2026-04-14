@@ -1,0 +1,23 @@
+<h1>Register</h1>
+<form method="POST" action="/register">
+  <input name="email" placeholder="Email"><br>
+  <input name="password" type="password" placeholder="Password"><br>
+  <input name="confirm_password" type="password" placeholder="confirm_password"><br>
+  <button type="submit">Create Account</button>
+</form>
+
+
+
+<ul>
+
+  {{range .errors.confirm_password}}
+
+  
+
+  {{end}}
+
+
+</ul>
+
+
+<a href="/login">Back to Login</a>
