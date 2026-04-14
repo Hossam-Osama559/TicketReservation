@@ -1,0 +1,58 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Full page center */
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f4f6f8;
+}
+
+/* Success card */
+#success {
+  background: white;
+  padding: 30px 40px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  max-width: 400px;
+}
+
+/* Title */
+#success p:first-child {
+  font-size: 24px;
+  font-weight: bold;
+  color: #28a745; /* green */
+  margin-bottom: 10px;
+}
+
+/* Description */
+#success p:nth-child(2) {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+/* Button-like link */
+#success a {
+  display: inline-block;
+  text-decoration: none;
+  background: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: background 0.2s;
+  font-size: 14px;
+}
+
+#success a:hover {
+  background: #0056b3;
+}
