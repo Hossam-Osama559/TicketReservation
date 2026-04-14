@@ -1,0 +1,12 @@
+CREATE TABLE payments (
+    session_id VARCHAR(255) PRIMARY KEY,
+
+    ticket_id INT NOT NULL,
+
+    completed BOOLEAN NOT NULL DEFAULT FALSE,
+
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+
+    FOREIGN KEY (ticket_id) REFERENCES tickets(id) ON DELETE CASCADE
+
+);
