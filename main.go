@@ -33,13 +33,13 @@ func MainPage(w http.ResponseWriter, r *http.Request) {
 
 	if clinetstate == nil {
 
-		w.WriteHeader(http.StatusUnauthorized)
+		http.Redirect(w, r, "/register", http.StatusFound)
 
 		return
 	}
 
 	w.Header().Set("Content-Type", "text/html")
-	w.WriteHeader(http.StatusOK)
+	w.WriteHeader(http.StatusFound)
 
 	http.ServeFile(w, r, "./static/reserve/reserve.html")
 
