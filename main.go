@@ -27,6 +27,13 @@ var (
 	qrcodeservice          *qrcode.QrcodeService
 )
 
+func isauth(r *http.Request) bool {
+
+	clienststate := r.Context().Value(authboss.CTXKeySessionState)
+
+	return clienststate != nil
+}
+
 func MainPage(w http.ResponseWriter, r *http.Request) {
 
 	clinetstate := r.Context().Value(authboss.CTXKeySessionState)
@@ -47,6 +54,14 @@ func MainPage(w http.ResponseWriter, r *http.Request) {
 
 func servestatic(w http.ResponseWriter, r *http.Request) {
 
+	if !isauth(r) {
+
+		w.WriteHeader(http.StatusNotFound)
+
+		return
+
+	}
+
 	path := r.URL.Path
 
 	path = "." + path
@@ -55,6 +70,13 @@ func servestatic(w http.ResponseWriter, r *http.Request) {
 }
 
 func successpayment(w http.ResponseWriter, r *http.Request) {
+
+	if !isauth(r) {
+
+		w.WriteHeader(http.StatusNotFound)
+
+		return
+	}
 
 	homepageurl := struct{ Link string }{Link: env.HomePageUrl.GetValue()}
 
